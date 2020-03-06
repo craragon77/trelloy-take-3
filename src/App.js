@@ -1,14 +1,15 @@
 import React from 'react';
-import STORE from './store';
+import List from './composition/List'
+import Card from './composition/Card'
 
-class App extends React.Component{
- const storedList = STORE.lists.map(list =>{
-   <ul key={list.id[i]}>
-     {list.lists}
-   </ul>
- })
-    return()
-    )}
+function App(){
+  return(
+    <div>
+      <h1>Trelloyes</h1>
+      <List />
+      <Card />
+    </div>
+  )
 }
 
 export default App

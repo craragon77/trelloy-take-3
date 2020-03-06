@@ -1,17 +1,17 @@
-import React from 'react'
-import STORE from './composition/store'
+import React from 'react';
+import STORE from './store';
 
-class List extends React.Component{
-    render(){
-        return(
-            {this.STORE.lists}.map(profile =>{
-                <ul>
-                    <h1>{profile.header}</h1>
-                    {/*}ok so i have a feeling that the card.js thing goes in here{<*/}
+function List(){
+    return (
+        <div>
+            {STORE.lists.map(header =>
+                <ul key={header.id}>
+                    <h3>{header.header}</h3>
                 </ul>
-            })
-        )
-    }
+                )
+            }
+        </div>
+    )
 }
 
-export default List
+export default List 

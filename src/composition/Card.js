@@ -1,14 +1,22 @@
 import React from 'react'
 import STORE from 'store'
 
-const cardContent = () => {
-        return (
-            {STORE.allCards}.map( card =>{
-                <h3>{card.title}</h3>
-                <button>Delete</button>
-                <p>{card.content}</p>
+function Card(){
+    return(
+        <div>
+            {STORE.allCards.map(card =>{
+                <li>
+                    <div key={card.id}>
+                        <h3>{card.title}</h3>
+                        <p>{card.content}</p>
+                        <button>delete</button>
+                    </div>
+                </li>
             })
-
-            }
-        )
+        }
+        </div>
+    )
 }
+
+
+export default Card
